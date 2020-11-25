@@ -6,6 +6,7 @@ select * from semast where afacctno = '0001017338';
 
 select * from cfmast where custodycd ='002C110950';
 select * from cimast where custid = '0001012736';
+
 --menu info
 select * from cmdmenu where cmdid = '' order by cmdid;
 select * from cmdmenu where en_cmdname like '%%'order by cmdid;
@@ -31,3 +32,8 @@ select * from v_appchk_by_tltxcd where tltxcd like '%%';
 select * from rptmaster where rptid like '%%'; -- V, R, D, S
 select * from rptfields where objname like '%%';
 ---
+--OD0001
+select * from odmast 0001190218000002
+--API home
+--SELECT ROUND(TO_NUMBER(SYS.VARVALUE)/100,5) v_sysvalue FROM sysvar sys WHERE  SYS.GRNAME = 'SYSTEM' AND SYS.VARNAME = 'ADVSELLDUTY';
+SELECT * FROM iOD;

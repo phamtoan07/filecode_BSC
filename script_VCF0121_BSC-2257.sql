@@ -1,4 +1,4 @@
-
+﻿--cfmast info:002C110931
 --menu info
 select * from cmdmenu where cmdid = '' order by cmdid;
 select * from cmdmenu where en_cmdname like '%%'order by cmdid;
@@ -50,16 +50,21 @@ AND OPENTYPE='CONTROL') API, ALLCODE A0,ALLCODE A3, ALLCODE A4, ALLCODE A1, ALLC
     )
 ---
 select * from user_source where upper(text) like '%INSERT INTO APIOPENACCOUNT%';
+select fullname, idcode from cfmast where custodycd = '002C110931';
+select * from APIOpenAccount;
+update APIOpenAccount set fullname ='Phạm Ngọc Toàn', idcode = '151928415';
+---
+select * from allcode where cdname= 'API0121';
 
+select * from cfmast where status = 'C';
 
+select * from tlprofiles order by tlid;
+---
+select idcode from cfmast group by idcode;
+---
+select * from cfmast where custid = '0001000642';
+insert into cfmast (CUSTID, SHORTNAME, FULLNAME, MNEMONIC, DATEOFBIRTH, IDTYPE, IDCODE, IDDATE, IDPLACE, IDEXPIRED, ADDRESS, PHONE, MOBILE, FAX, EMAIL, COUNTRY, PROVINCE, POSTCODE, RESIDENT, CLASS, GRINVESTOR, INVESTRANGE, TIMETOJOIN, CUSTODYCD, STAFF, COMPANYID, POSITION, SEX, SECTOR, BUSINESSTYPE, INVESTTYPE, EXPERIENCETYPE, INCOMERANGE, ASSETRANGE, FOCUSTYPE, BRID, CAREBY, APPROVEID, LASTDATE, AUDITORID, AUDITDATE, LANGUAGE, BANKACCTNO, BANKCODE, VALUDADDED, ISSUERID, DESCRIPTION, MARRIED, TAXCODE, INTERNATION, OCCUPATION, EDUCATION, CUSTTYPE, STATUS, PSTATUS, INVESTMENTEXPERIENCE, PCUSTODYCD, EXPERIENCECD, ORGINF, TLID, ISBANKING, PIN, USERNAME, MRLOANLIMIT, RISKLEVEL, TRADINGCODE, TRADINGCODEDT, LAST_CHANGE, OPNDATE, CFCLSDATE, MARGINALLOW, CUSTATCOM, T0LOANLIMIT, DMSTS, ACTIVEDATE, AFSTATUS, MOBILESMS, OPENVIA, OLAUTOID, VAT, REFNAME, TRADEFLOOR, TRADETELEPHONE, TRADEONLINE, COMMRATE, CONSULTANT, ACTIVESTS, LAST_MKID, LAST_OFID, ONLINELIMIT, ISCHKONLIMIT, MANAGETYPE, NSDSTATUS, NSDOPNDATE, NSDCLSDATE, CFTYPE, CFOPNDATE, CFEXDATE, CIFID)
+values ('0001012736', null, 'PNTOANTEST', 'PNTOANTEST', to_date('19-08-1995', 'dd-mm-yyyy'), '001', '0375529879', to_date('02-02-2020', 'dd-mm-yyyy'), 'HN', to_date('20-02-2028', 'dd-mm-yyyy'), '315 TC', null, null, null, 'ngnthanhhang@gmail.com ', '234', 'HN', null, null, 'KHDT', '000', '000', '000', '002C008006', '000', null, '000', null, '000', '009', '000', '000', '000', '000', '000', '0001', '0017', null, null, null, null, '001', null, '000', '000', null, null, '004', null, null, '001', '000', 'I', 'A', null, null, null, '00000', null, '0001', 'N', null, '002C000120', 10000000000000.0000, 'M', null, null, null, to_date('09-04-2020', 'dd-mm-yyyy'), null, 'Y', 'Y', 10000000000000.0000, 'N', to_date('09-04-2020', 'dd-mm-yyyy'), 'N', '0375529879', 'F', null, 'Y', null, 'Y', 'Y', 'Y', 100.0000, 'Y', 'N', '0001', null, 0, 'Y', 'A', 'P', null, null, null, null, null, null);
 
-
-
-
-
-
-
-
-
-
-
+---
+select * from t
